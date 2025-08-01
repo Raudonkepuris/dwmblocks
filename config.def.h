@@ -1,5 +1,5 @@
 /* macro for conveniently specifying pathu and pathc below */
-#define PATH(name)                      "<path to the folder containing block scripts>/"name
+#define PATH(name)                      "/home/liut/.local/share/suckless/dwmblocks/blocks/"name
 
 /* buffer size for capturing output of the programs used for updating blocks */
 #define CMDOUTLENGTH                    50
@@ -43,8 +43,10 @@ static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
 
 static Block blocks[] = {
 /*      pathu                           pathc                           interval        signal */
-        { PATH("calendar.sh"),          NULL,                           30,             1},
-        { PATH("volume.pipewire.sh"),            PATH("volume_button.sh"),       0,              2},
+        { PATH("volume.pipewire.sh"),   PATH("volume_button.sh"),       0,              2},
         { PATH("battery.sh"),           NULL,							      30,             3},
+        { PATH("bluetooth.sh"),         PATH("bluetooth_button.sh"),    60,             4},
+        { PATH("ethernet.sh"),          PATH("ethernet_button.sh"),     60,             5},
+        { PATH("calendar.sh"),          NULL,                           30,             1},
         { NULL } /* just to mark the end of the array */
 };
